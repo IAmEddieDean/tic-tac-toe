@@ -2,13 +2,36 @@ doctype html
 html
   head
     meta(charset='utf-8')      
-    title Apollo
-    link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
+    title Ticky Tacky
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    img#apollo(src='/assets/apollo.jpg')
-    h1#title Apollo
-
-    script(src='/vendor/lodash/lodash.min.js')
+    h1#title Tic Tac Toe
+    #controls
+      button#reset Reset
+      button#start Start
+      #chooser
+        label P1
+        input#p1-choose(type='color', value='#cc33ff')
+        label P2
+        input#p2-choose(type='color', value='#ff8e00') 
+      #players
+        #p1.player P1
+        #p2.player P2
+    table#board
+      tbody
+        tr
+          td#1
+          td#2
+          td#3
+        tr
+          td#4
+          td#5
+          td#6
+        tr
+          td#7
+          td#8
+          td#9
+        
+    script(src='/vendor/jquery/dist/jquery.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
